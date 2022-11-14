@@ -1,0 +1,94 @@
+<html>
+
+<head> 
+<title> 정보과학 </title>
+</head>
+
+<body>
+<h3> document.write() 활용 </h3>
+<hr>
+<script>
+document.write("<h3>Welcome!</h3>");
+</script>
+
+<script>
+function pwChk() {
+var txtPw = frm1.pw.value;
+
+if(txtPw == 1234){
+document.location.href="https://hansungsh.sen.hs.kr/";
+}
+
+
+else{
+document.write("당신의 회원이 아니므로 사이트로 접속할 수 없습니다.");
+}
+}
+</script>
+
+<script>
+function fsum() {
+var n1=frm2.num1.value;
+var n2=frm2.num2.value;
+var res=Number(n1) + Number(n2);
+frm2.result.value=res;
+}
+
+function fmin() {
+var n1=frm2.num1.value;
+var n2=frm2.num2.value;
+var res=Number(n1) - Number(n2);
+frm2.result.value=res;
+}
+
+function fgob() {
+var n1=frm2.num1.value;
+var n2=frm2.num2.value;
+var res=Number(n1) * Number(n2);
+frm2.result.value=res;
+}
+
+function fnanu() {
+var n1=frm2.num1.value;
+var n2=frm2.num2.value;
+var res=Number(n1) / Number(n2);
+frm2.result.value=res;
+}
+</script>
+
+
+<form name="frm1">
+이름 :<input type="text">
+<br>
+암호 :<input type="password" name="pw">
+<input type="button" value="확인" onclick="pwChk()">
+<br>
+자소서: <br>
+<textarea cols=50 rows=10>
+</textarea>
+</form>
+
+
+
+
+
+
+<hr>
+<br>
+<form name="frm2">
+숫자 1: <input type="text" size="2" name="num1"> <br>
+숫자 2: <input type="text" size="2" name="num2"> <br>
+
+<input type="button" value="+" onClick="fsum()">
+<input type="button" value="-" onClick="fmin()">
+<input type="button" value="x" onClick="fgob()">
+<input type="button" value="%" onClick="fnanu()">
+
+<br>
+결과 : <input type="text" size="5" name="result">
+</form>
+
+
+
+</body>
+</html>
